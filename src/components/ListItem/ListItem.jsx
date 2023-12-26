@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './ListItem.module.css';
 import { useDispatch } from 'react-redux';
-import { deleteContasctThunk } from 'store/operations';
+import { deleteContasctThunk } from 'store/contacts/operations';
 
 export const ListItem = ({ name, phone, id }) => {
   const dispatch = useDispatch();
