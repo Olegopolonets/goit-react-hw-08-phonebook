@@ -1,28 +1,32 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { registerThunk } from '../../store/auth/operation.js';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { loginThunk } from 'store/auth/operation';
 
-const Register = () => {
+const Login = () => {
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const submit = data => {
     console.log(data);
-    dispatch(registerThunk(data));
+    dispatch(loginThunk(data))
+      .unwrap()
+      .then(res => {
+        console.log(res);
+        navigate('/contacts');
+        toast.success(`Welcome, ${res.user.name}!`);
+      })
+      .catch(() => {
+        toast.error(`Who are you?`);
+      });
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit(submit)}>
-        <label>
-          <span>Name</span>
-          <input
-            {...register('name')}
-            type="text"
-            placeholder="Enter your name"
-          />
-        </label>
         <label>
           <span>Email</span>
           <input
@@ -39,10 +43,10 @@ const Register = () => {
             placeholder="Enter your password"
           />
         </label>
-        <button>Register</button>
+        <button>Login</button>
       </form>
     </div>
   );
 };
 
-export default Register;
+export default Login;

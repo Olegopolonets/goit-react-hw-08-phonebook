@@ -6,6 +6,7 @@ import { Section } from '../pages/Contacts/Section/Section.jsx';
 import Header from './Header/Header.jsx';
 import NotFound from 'pages/NotFound/NotFound.jsx';
 import Register from 'pages/Register/Register.jsx';
+import Login from 'pages/Login/Login.jsx';
 
 export const App = () => {
   return (
@@ -28,7 +29,7 @@ export const App = () => {
           }
         />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<h1>Login</h1>} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
