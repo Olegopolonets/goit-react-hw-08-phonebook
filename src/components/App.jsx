@@ -4,6 +4,7 @@ import { ContactList } from './ContactList/ContactList.jsx';
 import { Filter } from './Filter/Filter.jsx';
 import { Section } from './Section/Section.jsx';
 import Header from './Header/Header.jsx';
+import NotFound from 'pages/NotFound.jsx';
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
             </>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -29,3 +29,13 @@ code {
     background-position: 0% 50%;
   }
 }
+
+a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.active {
+  color: tomato;
+  text-decoration: underline;
+}
