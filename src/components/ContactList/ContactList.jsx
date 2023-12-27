@@ -11,7 +11,7 @@ import {
   SelectError,
 } from '../../store/contacts/selector.js';
 
-export const ContactList = ({ children }) => {
+export const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
   const loading = useSelector(SelectLoading);
@@ -30,7 +30,6 @@ export const ContactList = ({ children }) => {
   console.log(contacts);
   return (
     <>
-      {children}
       {filteredContacts.length === 0 ? (
         <p className={s.errorMessage}>No contacts match your search</p>
       ) : (
