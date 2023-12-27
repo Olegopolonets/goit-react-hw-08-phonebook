@@ -6,6 +6,7 @@ import {
   selectUserName,
 } from '../../store/auth/selectors.js';
 import { logoutThunk } from 'store/auth/operation.js';
+import { HeaderWrapper, NavBar } from './StyledHeader.jsx';
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -13,10 +14,10 @@ const Header = () => {
   const dispatch = useDispatch();
 
   return (
-    <header>
+    <HeaderWrapper>
       <h2>LOGO</h2>
       {user && <h2>{user}</h2>}
-      <div>
+      <NavBar>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contacts">Contacts</NavLink>
 
@@ -32,8 +33,8 @@ const Header = () => {
             | <button onClick={() => dispatch(logoutThunk())}>Exit</button>
           </>
         )}
-      </div>
-    </header>
+      </NavBar>
+    </HeaderWrapper>
   );
 };
 

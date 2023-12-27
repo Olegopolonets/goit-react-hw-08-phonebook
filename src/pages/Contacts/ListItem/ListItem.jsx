@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContasctThunk } from 'store/contacts/operations';
 import { BtnDelete, ItemContact } from './StyledListItem';
+import { MdOutlineDeleteForever } from 'react-icons/md';
 
 export const ListItem = ({ name, phone, id }) => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export const ListItem = ({ name, phone, id }) => {
         type="button"
         onClick={() => dispatch(deleteContasctThunk(id))}
       >
-        Delete
+        <MdOutlineDeleteForever size={40} />
       </BtnDelete>
     </ItemContact>
   );

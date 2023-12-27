@@ -6,22 +6,19 @@ export const ItemContact = styled.li`
   justify-content: space-between;
   width: 75%;
   font-size: 20px;
+  margin: 10px auto;
 `;
 
 export const BtnDelete = styled.button`
-  width: 60px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
   background-color: aliceblue;
   border-radius: 5px;
   border: 1px solid azure;
-  padding-left: 5px;
-  padding-right: 5px;
   cursor: pointer;
-  margin: 0;
   outline-color: bisque;
   transition: all 0.5s ease;
 
