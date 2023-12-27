@@ -1,4 +1,6 @@
-.contactList {
+import styled from 'styled-components';
+
+export const ContactsList = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
@@ -8,15 +10,15 @@
   padding: 0;
   font-size: 22px;
   gap: 10px;
-}
+`;
 
-.errorMessage {
+export const MessageNotContacts = styled.p`
   font-size: 21px;
   font-style: italic;
   text-align: center;
-}
+`;
 
-.loaderWrapper {
+export const LoaderWrapper = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
@@ -25,4 +27,4 @@
   height: 100%;
   inset: 0;
   z-index: 10;
-}
+`;

@@ -1,4 +1,6 @@
-.input {
+import styled from 'styled-components';
+
+export const InputAddContact = styled.input`
   width: 80%;
   height: 30px;
   background-color: aliceblue;
@@ -10,9 +12,9 @@
   display: flex;
   margin-top: 20px;
   outline-color: bisque;
-}
+`;
 
-.button {
+export const BtnAddContact = styled.button`
   padding: 10px;
   width: 100px;
   height: 40px;
@@ -32,4 +34,4 @@
   &:hover {
     background-color: bisque;
   }
-}
+`;

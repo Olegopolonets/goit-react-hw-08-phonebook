@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { ListItem } from '../ListItem/ListItem.jsx';
-import s from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContasctsThunk } from '../../../store/contacts/operations.js';
 import { FallingLines } from 'react-loader-spinner';
@@ -10,6 +9,11 @@ import {
   SelectLoading,
   SelectError,
 } from '../../../store/contacts/selector.js';
+import {
+  ContactsList,
+  LoaderWrapper,
+  MessageNotContacts,
+} from './StyledContactList.jsx';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
@@ -31,23 +35,23 @@ export const ContactList = () => {
   return (
     <>
       {filteredContacts.length === 0 ? (
-        <p className={s.errorMessage}>No contacts match your search</p>
+        <MessageNotContacts>No contacts match your search</MessageNotContacts>
       ) : (
-        <ul className={s.contactList}>
+        <ContactsList>
           {filteredContacts.map(({ id, name, phone }) => (
             <ListItem key={id} id={id} name={name} phone={phone} />
           ))}
-        </ul>
+        </ContactsList>
       )}
       {loading && (
-        <div className={s.loaderWrapper}>
+        <LoaderWrapper>
           <FallingLines
             color="#315cad"
             width="300"
             visible={true}
             ariaLabel="falling-circles-loading"
           />
-        </div>
+        </LoaderWrapper>
       )}
       {error && <p>{error}</p>}
     </>

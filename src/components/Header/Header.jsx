@@ -18,11 +18,11 @@ const Header = () => {
       {user && <h2>{user}</h2>}
       <div>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/contacts">Contscts</NavLink>
+        <NavLink to="/contacts">Contacts</NavLink>
 
         {!isLoggedIn && (
           <>
-            <NavLink to="/register">Sing Up</NavLink>
+            <NavLink to="/register">Sign Up</NavLink>
             <NavLink to="/login">Login</NavLink>
           </>
         )}

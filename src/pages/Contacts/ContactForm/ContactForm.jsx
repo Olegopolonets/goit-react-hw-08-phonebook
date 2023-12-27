@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import s from './ContactForm.module.css';
 import { addContasctThunk } from '../../../store/contacts/operations.js';
 import { getContacts } from '../../../store/contacts/selector.js';
+import { BtnAddContact, InputAddContact } from './StyledContactForm';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -21,25 +21,17 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className={s.formBox} autoComplete="off" onSubmit={createContact}>
-      <input
-        className={s.input}
-        type="text"
-        name="name"
-        placeholder="Contact name"
-      />
+    <form autoComplete="off" onSubmit={createContact}>
+      <InputAddContact type="text" name="name" placeholder="Contact name" />
 
-      <input
-        className={s.input}
+      <InputAddContact
         type="tel"
         name="phone"
         placeholder="Phone number"
         required
       />
 
-      <button className={s.button} type="submit">
-        Add contact
-      </button>
+      <BtnAddContact type="submit">Add contact</BtnAddContact>
     </form>
   );
 };

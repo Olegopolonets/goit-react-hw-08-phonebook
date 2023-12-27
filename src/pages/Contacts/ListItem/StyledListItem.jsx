@@ -1,11 +1,14 @@
-.contactItem {
+import styled from 'styled-components';
+
+export const ItemContact = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
-}
+  width: 75%;
+  font-size: 20px;
+`;
 
-.deleteBtn {
+export const BtnDelete = styled.button`
   width: 60px;
   height: 20px;
   display: flex;
@@ -23,6 +26,6 @@
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: red;
+    background-color: tomato;
   }
-}
+`;

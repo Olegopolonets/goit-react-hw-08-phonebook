@@ -1,4 +1,6 @@
-.input {
+import styled from 'styled-components';
+
+export const InputFilter = styled.input`
   width: 80%;
   height: 30px;
   background-color: aliceblue;
@@ -9,4 +11,4 @@
   margin: 0 auto;
   display: flex;
   margin-top: 20px;
-}
+`;

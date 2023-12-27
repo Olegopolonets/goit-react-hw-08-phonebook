@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './Filter.module.css';
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../../../store/contacts/phonebookSlice.js';
+import { InputFilter } from './StyledFilter';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -9,11 +9,6 @@ export const Filter = () => {
     dispatch(setFilter(event.target.value));
   };
   return (
-    <input
-      className={s.input}
-      onChange={handleFilter}
-      type="text"
-      placeholder="Search"
-    />
+    <InputFilter onChange={handleFilter} type="text" placeholder="Search" />
   );
 };
