@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import { ContactForm } from './ContactForm/ContactForm.jsx';
-import { ContactList } from './ContactList/ContactList.jsx';
-import { Filter } from './Filter/Filter.jsx';
-import { Section } from './Section/Section.jsx';
+import { ContactForm } from '../pages/Contacts/ContactForm/ContactForm.jsx';
+import { ContactList } from '../pages/Contacts/ContactList/ContactList.jsx';
+import { Filter } from '../pages/Contacts/Filter/Filter.jsx';
+import { Section } from '../pages/Contacts/Section/Section.jsx';
 import Header from './Header/Header.jsx';
-import NotFound from 'pages/NotFound.jsx';
+import NotFound from 'pages/NotFound/NotFound.jsx';
+import Register from 'pages/Register/Register.jsx';
 
 export const App = () => {
   return (
@@ -26,6 +27,8 @@ export const App = () => {
             </>
           }
         />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<h1>Login</h1>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
