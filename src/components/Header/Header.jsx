@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <h2>LOGO</h2>
-      {user && <h2>{user}</h2>}
+      {user && <h2>Welcome to the club {user}</h2>}
       <NavBar>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contacts">Contacts</NavLink>

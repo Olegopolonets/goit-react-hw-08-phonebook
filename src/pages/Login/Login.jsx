@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { loginThunk } from 'store/auth/operation';
+import { BgLogin, LoginForm } from './StyledLogin';
+import { Button, TextField } from '@mui/material';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -25,26 +27,25 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(submit)}>
-        <label>
-          <span>Email</span>
-          <input
-            {...register('email')}
-            type="email"
-            placeholder="Enter your email"
-          />
-        </label>
-        <label>
-          <span>Password</span>
-          <input
-            {...register('password')}
-            type="password"
-            placeholder="Enter your password"
-          />
-        </label>
-        <button>Login</button>
-      </form>
+    <div style={{ display: 'flex' }}>
+      <LoginForm onSubmit={handleSubmit(submit)}>
+        <TextField
+          {...register('email')}
+          type="email"
+          label="Enter email"
+          variant="outlined"
+        />
+        <TextField
+          {...register('password')}
+          type="password"
+          label="Enter password"
+          variant="outlined"
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Login
+        </Button>
+      </LoginForm>
+      <BgLogin></BgLogin>
     </div>
   );
 };

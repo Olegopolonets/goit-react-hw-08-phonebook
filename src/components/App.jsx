@@ -10,6 +10,7 @@ import Login from 'pages/Login/Login.jsx';
 import { useDispatch } from 'react-redux';
 import { refreshThunk } from 'store/auth/operation.js';
 import { useEffect } from 'react';
+import Home from 'pages/Home/Home.jsx';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export const App = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<h1>Homepage</h1>} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/contacts"
           element={

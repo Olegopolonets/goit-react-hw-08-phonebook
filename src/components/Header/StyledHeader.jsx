@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-  background-color: rgba(200, 250, 250, 0.6);
+  background-color: #1100ff;
   width: 100%;
   display: flex;
   justify-content: space-between;
