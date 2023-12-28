@@ -14,6 +14,7 @@ import {
   LoaderWrapper,
   MessageNotContacts,
 } from './StyledContactList.jsx';
+import Loader from 'components/Loader/Loader.jsx';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
@@ -43,16 +44,7 @@ export const ContactList = () => {
           ))}
         </ContactsList>
       )}
-      {loading && (
-        <LoaderWrapper>
-          <FallingLines
-            color="#315cad"
-            width="300"
-            visible={true}
-            ariaLabel="falling-circles-loading"
-          />
-        </LoaderWrapper>
-      )}
+      {loading && <Loader />}
       {error && <p>{error}</p>}
     </>
   );
