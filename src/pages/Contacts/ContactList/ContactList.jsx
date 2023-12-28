@@ -2,18 +2,13 @@ import React, { useEffect } from 'react';
 import { ListItem } from '../ListItem/ListItem.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContasctsThunk } from '../../../store/contacts/operations.js';
-import { FallingLines } from 'react-loader-spinner';
 import {
   getContacts,
   getFilter,
   SelectLoading,
   SelectError,
 } from '../../../store/contacts/selector.js';
-import {
-  ContactsList,
-  LoaderWrapper,
-  MessageNotContacts,
-} from './StyledContactList.jsx';
+import { ContactsList, MessageNotContacts } from './StyledContactList.jsx';
 import Loader from 'components/Loader/Loader.jsx';
 
 export const ContactList = () => {
