@@ -48,7 +48,7 @@ const Header = () => {
 
           <NavBar style={{ alignItems: 'center' }}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/contacts">Contacts</NavLink>
+            {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
 
             {!isLoggedIn && (
               <>
