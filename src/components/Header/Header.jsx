@@ -1,26 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
-import {
-  selectIsLoggedIn,
-  selectUserName,
-} from '../../store/auth/selectors.js';
-import { logoutThunk } from 'store/auth/operation.js';
-import { HeaderWrapper, NavBar } from './StyledHeader.jsx';
-import {
-  AppBar,
-  Avatar,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import { selectIsLoggedIn } from '../../store/auth/selectors.js';
+
+import { NavBar } from './StyledHeader.jsx';
+import { AppBar, Box, Toolbar, Typography } from '@mui/material';
+import UserMenu from 'components/UserMenu/UserMenu.jsx';
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const user = useSelector(selectUserName);
-  const dispatch = useDispatch();
 
   return (
     // <HeaderWrapper>
@@ -69,20 +57,7 @@ const Header = () => {
               </>
             )}
 
-            {isLoggedIn && (
-              <>
-                <Typography variant="h6" color="inherit" component="h6">
-                  {user && <p>Welcome to the club, {user}!</p>}
-                </Typography>
-                <Button
-                  onClick={() => dispatch(logoutThunk())}
-                  variant="contained"
-                  color="error"
-                >
-                  EXIT
-                </Button>
-              </>
-            )}
+            {isLoggedIn && <UserMenu />}
           </NavBar>
         </Toolbar>
       </AppBar>
