@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setFilter } from '../../../store/contacts/phonebookSlice.js';
+import { setFilter } from '../../store/contacts/phonebookSlice.js';
 // import { InputFilter } from './StyledFilter';
 import { TextField } from '@mui/material';
 

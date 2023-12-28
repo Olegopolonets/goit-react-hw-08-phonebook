@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContasctThunk } from '../../../store/contacts/operations.js';
-import { getContacts } from '../../../store/contacts/selector.js';
-import { FormWrapper } from './StyledContactForm';
+import { addContasctThunk } from '../../store/contacts/operations.js';
+import { getContacts } from '../../store/contacts/selector.js';
+import { FormWrapper } from './StyledContactForm.jsx';
 import { Button, TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 

@@ -1,8 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { ContactForm } from '../pages/Contacts/ContactForm/ContactForm.jsx';
-import { ContactList } from '../pages/Contacts/ContactList/ContactList.jsx';
-import { Filter } from '../pages/Contacts/Filter/Filter.jsx';
-import { Section } from '../pages/Contacts/Section/Section.jsx';
 import Header from './Header/Header.jsx';
 import NotFound from 'pages/NotFound/NotFound.jsx';
 import Register from 'pages/Register/Register.jsx';
@@ -15,6 +11,7 @@ import { PrivateRoute } from 'routesConfig/PrivateRoute.jsx';
 import { PublicRoute } from 'routesConfig/PublicRoute.jsx';
 import { selectIsRefresh } from '../store/auth/selectors.js';
 import Loader from './Loader/Loader.jsx';
+import Contacts from 'pages/Contacts/Contacts.jsx';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -36,13 +33,7 @@ export const App = () => {
           element={
             <>
               <PrivateRoute>
-                <Section title={'Phonebook'}>
-                  <ContactForm />
-                </Section>
-                <Section title={'Contacts'}>
-                  <Filter />
-                  <ContactList />
-                </Section>
+                <Contacts />
               </PrivateRoute>
             </>
           }

@@ -1,4 +1,4 @@
-import { LoaderWrapper } from 'pages/Contacts/ContactList/StyledContactList';
+import { LoaderWrapper } from 'components/ContactList/StyledContactList';
 import React from 'react';
 import { FallingLines } from 'react-loader-spinner';
 
