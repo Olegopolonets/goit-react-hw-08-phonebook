@@ -35,7 +35,7 @@ const Header = () => {
     // </HeaderWrapper>
 
     <Box>
-      <AppBar position="static">
+      <AppBar position="static" style={{ justifyContent: 'space-between' }}>
         <Toolbar variant="dense">
           <Typography
             variant="h6"
@@ -46,7 +46,7 @@ const Header = () => {
             <Link to="/">Better Call Saul</Link>
           </Typography>
 
-          <NavBar style={{ flexGrow: 1, alignItems: 'center' }}>
+          <NavBar style={{ alignItems: 'center' }}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/contacts">Contacts</NavLink>
 
