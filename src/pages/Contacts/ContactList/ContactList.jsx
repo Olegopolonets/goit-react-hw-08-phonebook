@@ -39,8 +39,8 @@ export const ContactList = () => {
         <MessageNotContacts>No contacts match your search</MessageNotContacts>
       ) : (
         <ContactsList>
-          {filteredContacts.map(({ id, name, phone }) => (
-            <ListItem key={id} id={id} name={name} phone={phone} />
+          {filteredContacts.map(({ id, name, number }) => (
+            <ListItem key={id} id={id} name={name} number={number} />
           ))}
         </ContactsList>
       )}

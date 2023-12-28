@@ -4,13 +4,13 @@ import { deleteContasctThunk } from 'store/contacts/operations';
 import { BtnDelete, ItemContact } from './StyledListItem';
 import { MdOutlineDeleteForever } from 'react-icons/md';
 
-export const ListItem = ({ name, phone, id }) => {
+export const ListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   return (
     <ItemContact>
       <div>
         <b>{name}: </b>
-        <i>{phone}</i>
+        <i>{number}</i>
       </div>
 
       <BtnDelete

@@ -16,13 +16,13 @@ export const ContactForm = () => {
   const createContact = event => {
     event.preventDefault();
     const name = event.target.elements.name.value;
-    const phone = event.target.elements.phone.value;
+    const number = event.target.elements.number.value;
     if (contacts.some(contact => contact.name === name)) {
       alert(`Contact with the name ${name} already exists!`);
       return;
     }
 
-    dispatch(addContasctThunk({ name, phone }));
+    dispatch(addContasctThunk({ name, number }));
     event.target.reset();
   };
 
@@ -39,7 +39,7 @@ export const ContactForm = () => {
 
       <TextField
         type="tel"
-        name="phone"
+        name="number"
         label="Phone number"
         variant="standard"
         color="warning"
