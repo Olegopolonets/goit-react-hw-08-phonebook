@@ -53,21 +53,12 @@ const Header = () => {
             variant="h6"
             color="inherit"
             component="div"
-            sx={{ flexGrow: 1 }}
+            style={{ flexGrow: 1 }}
           >
             <Link to="/">Better Call Saul</Link>
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="inherit"
-            component="h6"
-            sx={{ flexGrow: 1 }}
-          >
-            {user && <h2>Welcome to the club, {user}!</h2>}
-          </Typography>
-
-          <NavBar sx={{ flexGrow: 1, alignItems: 'center' }}>
+          <NavBar style={{ flexGrow: 1, alignItems: 'center' }}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/contacts">Contacts</NavLink>
 
@@ -80,6 +71,9 @@ const Header = () => {
 
             {isLoggedIn && (
               <>
+                <Typography variant="h6" color="inherit" component="h6">
+                  {user && <p>Welcome to the club, {user}!</p>}
+                </Typography>
                 <Button
                   onClick={() => dispatch(logoutThunk())}
                   variant="contained"
