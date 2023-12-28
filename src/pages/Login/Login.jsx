@@ -34,12 +34,14 @@ const Login = () => {
           type="email"
           label="Enter email"
           variant="outlined"
+          required
         />
         <TextField
           {...register('password')}
           type="password"
           label="Enter password"
           variant="outlined"
+          required
         />
         <Button type="submit" variant="contained" color="primary">
           Login

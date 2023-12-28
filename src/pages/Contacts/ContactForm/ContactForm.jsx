@@ -1,7 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addContasctThunk } from '../../../store/contacts/operations.js';
 import { getContacts } from '../../../store/contacts/selector.js';
-import { BtnAddContact, InputAddContact } from './StyledContactForm';
+import {
+  BtnAddContact,
+  FormWrapper,
+  InputAddContact,
+} from './StyledContactForm';
+import { Button, TextField } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -21,17 +27,28 @@ export const ContactForm = () => {
   };
 
   return (
-    <form autoComplete="off" onSubmit={createContact}>
-      <InputAddContact type="text" name="name" placeholder="Contact name" />
-
-      <InputAddContact
-        type="tel"
-        name="phone"
-        placeholder="Phone number"
+    <FormWrapper autoComplete="off" onSubmit={createContact}>
+      <TextField
+        type="text"
+        name="name"
+        label="Contact name"
+        variant="standard"
+        color="warning"
         required
       />
 
-      <BtnAddContact type="submit">Add contact</BtnAddContact>
-    </form>
+      <TextField
+        type="tel"
+        name="phone"
+        label="Phone number"
+        variant="standard"
+        color="warning"
+        required
+      />
+
+      <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+        Add contact
+      </Button>
+    </FormWrapper>
   );
 };

@@ -43,6 +43,10 @@ img {
   height: auto;
 }
 
+h2 {
+  color: white;
+}
+
 a {
   color: white;
   font-size: 20px;

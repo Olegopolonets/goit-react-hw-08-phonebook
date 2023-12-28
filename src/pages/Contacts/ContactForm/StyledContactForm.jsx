@@ -1,17 +1,9 @@
 import styled from 'styled-components';
 
-export const InputAddContact = styled.input`
-  width: 80%;
-  height: 30px;
-  background-color: aliceblue;
-  border-radius: 20px;
-  border-color: transparent;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0 auto;
+export const FormWrapper = styled.form`
   display: flex;
-  margin-top: 20px;
-  outline-color: bisque;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const BtnAddContact = styled.button`

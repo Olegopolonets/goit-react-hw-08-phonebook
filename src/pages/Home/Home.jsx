@@ -6,14 +6,14 @@ import { HomeWrapper } from './StyledHome';
 const Home = () => {
   return (
     <HomeWrapper>
-      <h1> FREE ONLINE CONTACT BOOK</h1>
-      <h2>
+      <h1> FREE ONLINE PHONEBOOK</h1>
+      <h3>
         Contact book is an important tool that helps you stay in touch with
         important people.
-      </h2>
-      <h2>
+      </h3>
+      <h3>
         You can create your contact book quickly and easily on our website.
-      </h2>
+      </h3>
       <ButtonGroup
         variant="contained"
         aria-label="outlined primary button group"

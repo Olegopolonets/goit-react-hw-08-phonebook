@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../../../store/contacts/phonebookSlice.js';
-import { InputFilter } from './StyledFilter';
+// import { InputFilter } from './StyledFilter';
+import { TextField } from '@mui/material';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -9,6 +10,13 @@ export const Filter = () => {
     dispatch(setFilter(event.target.value));
   };
   return (
-    <InputFilter onChange={handleFilter} type="text" placeholder="Search" />
+    <TextField
+      style={{ width: '100%' }}
+      onChange={handleFilter}
+      type="text"
+      label="Search"
+      variant="standard"
+      color="warning"
+    />
   );
 };
