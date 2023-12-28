@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 import { toast } from 'react-toastify';
 import { loginThunk } from 'store/auth/operation';
 import { BgLogin, LoginForm } from './StyledLogin';
@@ -9,7 +9,7 @@ import { Button, TextField } from '@mui/material';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const submit = data => {
@@ -18,7 +18,7 @@ const Login = () => {
       .unwrap()
       .then(res => {
         console.log(res);
-        navigate('/contacts');
+
         toast.success(`Welcome, ${res.user.name}!`);
       })
       .catch(() => {
