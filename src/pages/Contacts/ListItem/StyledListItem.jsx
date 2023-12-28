@@ -23,6 +23,8 @@ export const BtnDelete = styled.button`
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: tomato;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transform: scale(1.5);
   }
 `;

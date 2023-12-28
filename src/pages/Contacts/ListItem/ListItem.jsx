@@ -17,7 +17,7 @@ export const ListItem = ({ name, phone, id }) => {
         type="button"
         onClick={() => dispatch(deleteContasctThunk(id))}
       >
-        <MdOutlineDeleteForever size={40} />
+        <MdOutlineDeleteForever size={40} color="tomato" />
       </BtnDelete>
     </ItemContact>
   );
